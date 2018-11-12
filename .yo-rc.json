@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Mohamed Elmi Hassan",
+      "authorEmail": "maxto024@gmail.com",
+      "authorUrl": "http://melmi.me"
+    }
+  }
+}

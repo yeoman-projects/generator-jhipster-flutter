@@ -3,7 +3,7 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-jhipster-flutter using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-jhipster-flutter using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)) since this generator is based on flutter  (we assume you have pre-installed [flutter.io](https://flutter.io/docs/get-started/install)) .
 
 ```bash
 npm install -g yo

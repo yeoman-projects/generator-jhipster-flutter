@@ -13,8 +13,10 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
-    "yeoman-generator"
+    "jhipster",
+    "jhipster-module",
+    "yeoman-generator",
+    "flutter"
   ],
   "devDependencies": {
     "yeoman-test": "^1.7.0",
@@ -34,7 +36,14 @@
   "dependencies": {
     "yeoman-generator": "^2.0.1",
     "chalk": "^2.1.0",
-    "yosay": "^2.0.1"
+    "yosay": "^2.0.1",
+    "cross-spawn": "6.0.5",
+    "generator-jhipster": ">=4.13.3",
+    "jsonfile": "4.0.0",
+    "mkdirp": "0.5.1",
+    "semver": "5.5.0",
+    "shelljs": "0.8.1",
+    "yeoman-environment": "2.3.3"
   },
   "jest": {
     "testEnvironment": "node"

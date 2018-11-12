@@ -7,10 +7,16 @@ describe('generator-jhipster-flutter:app', () => {
   beforeAll(() => {
     return helpers
       .run(path.join(__dirname, '../generators/app'))
-      .withPrompts({ someAnswer: true });
+      .withPrompts({ appName: 'easypos', directoryPath: '../../easypos' });
   });
 
   it('creates files', () => {
-    assert.file(['dummyfile.txt']);
+    assert.file(['android']);
+    assert.file(['assets']);
+    assert.file(['ios']);
+    assert.file(['lib']);
+    assert.file(['test']);
+    assert.file(['pubspec.yaml']);
+    assert.file(['README.md']);
   });
 });

@@ -3,7 +3,7 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-jhipster-flutter using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)) since this generator is based on flutter  (we assume you have pre-installed [flutter.io](https://flutter.io/docs/get-started/install)) .
+First, install [Yeoman](http://yeoman.io) and generator-jhipster-flutter using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)) since this generator is based on flutter  (we assume you have pre-installed  if not follow this [ install flutter.io](https://flutter.io/docs/get-started/install)) .
 
 ```bash
 npm install -g yo
@@ -16,12 +16,9 @@ Then generate your new project:
 yo jhipster-flutter
 ```
 
-## Getting To Know Yeoman
+## Getting To Know Generator jhipster Flutter 
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+ * 
 
 ## License
 

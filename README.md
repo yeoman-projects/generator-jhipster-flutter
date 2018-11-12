@@ -18,7 +18,8 @@ yo jhipster-flutter
 
 ## Getting To Know Generator jhipster Flutter 
 
- * 
+ * to setup you editor follow [Set up an editor](https://flutter.io/docs/get-started/editor?tab=vscode)
+
 
 ## License
 

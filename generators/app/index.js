@@ -56,11 +56,11 @@ module.exports = class extends BaseGenerator {
     };
   }
 
-  prompting() {
+  async prompting() {
     const done = this.async();
     const messageAskForPath =
       'Enter the directory where your JHipster Backend is located:';
-    const prompts = [
+    this.answers = await this.prompt([
       {
         type: 'input',
         name: 'appName',
@@ -84,33 +84,53 @@ module.exports = class extends BaseGenerator {
           return `${path} is not a directory or doesn't exist`;
         }
       }
-    ];
+    ]);
 
     if (this.defaultApp) {
       this.ionicAppName = 'ionic4j';
       this.directoryPath = 'backend';
       done();
-    } else {
-      this.prompt(prompts).then(props => {
-        this.ionicAppName = props.appName;
-        this.directoryPath = props.directoryPath;
-        done();
-      });
     }
+    done();
   }
 
   Writing() {
+    this.log(this.answers);
+
     this.template = function(source, destination) {
       this.fs.copy(this.templatePath(source), this.destinationPath(destination));
+    };
+    this.templateTpl = function(source, destination, props) {
+      this.log(source, destination, props);
+      this.fs.copyTpl(
+        this.templatePath(source),
+        this.destinationPath(destination),
+        props
+      );
     };
     this.template('android', 'android');
     this.template('assets', 'assets');
     this.template('ios', 'ios');
-    this.template('lib', 'lib');
     this.template('test', 'test');
-    this.template('pubspec.yaml', 'pubspec.yaml');
+
     this.template('README.md', 'README.md');
     this.template('.gitignore', '.gitignore');
+    // Templating
+    this.templateTpl('lib/style/theme.dart.ejs', 'lib/style/theme.dart', this.answers);
+    this.templateTpl(
+      'lib/ui/login_page.dart.ejs',
+      'lib/ui/login_page.dart',
+      this.answers
+    );
+    this.templateTpl(
+      'lib/utils/bubble_indication_painter.dart.ejs',
+      'lib/utils/bubble_indication_painter.dart',
+      this.answers
+    );
+    this.templateTpl('lib/main.dart.ejs', 'lib/main.dart', this.answers);
+    this.templateTpl('test/widget_test.dart.ejs', 'test/widget_test.dart', this.answers);
+
+    this.templateTpl('pubspec.yaml.ejs', 'pubspec.yaml', this.answers);
   }
 
   install() {

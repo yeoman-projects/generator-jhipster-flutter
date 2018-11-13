@@ -16,7 +16,10 @@ describe('generator-jhipster-flutter:app', () => {
     assert.file(['ios']);
     assert.file(['lib']);
     assert.file(['test']);
+    assert.file(['lib/style/theme.dart']);
+    assert.file(['lib/ui/login_page.dart']);
+    assert.file(['lib/utils/bubble_indication_painter.dart']);
+    assert.file(['test/widget_test.dart']);
     assert.file(['pubspec.yaml']);
-    assert.file(['README.md']);
   });
 });
